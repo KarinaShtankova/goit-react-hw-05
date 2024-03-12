@@ -1,0 +1,41 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding-top: 32px;
+}
+
+.item {
+  max-width: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--main-box-shadow);
+}
+
+.descContainer {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pic {
+  height: 370px;
+}
+
+.title {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+}
+
+.desc {
+  color: var(--secondary-color);
+  font-weight: 600;
+  text-align: center;
+}
+
+.descSpan {
+  color: var(--main-color);
+}

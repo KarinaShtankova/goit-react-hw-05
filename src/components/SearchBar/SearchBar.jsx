@@ -1,4 +1,6 @@
 import toast from 'react-hot-toast';
+import css from './SearchBar.module.css';
+import { MdSearch } from 'react-icons/md';
 
 export default function SearchBar({ onSubmit }) {
   const handleSubmit = e => {
@@ -13,9 +15,16 @@ export default function SearchBar({ onSubmit }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" name="search" />
-      <button type="submit">search</button>
+    <form className={css.form} onSubmit={handleSubmit}>
+      <input
+        className={css.input}
+        type="text"
+        name="search"
+        placeholder="Search movies"
+      />
+      <button className={css.btn} type="submit">
+        <MdSearch size={24} className={css.icon} />
+      </button>
     </form>
   );
 }

@@ -5,6 +5,7 @@ import { useSearchParams } from 'react-router-dom';
 import Loader from '../../components/Loader/Loader';
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 import SearchBar from '../../components/SearchBar/SearchBar';
+import css from './MoviesPage.module.css';
 
 export default function MoviesPage() {
   const [movies, setMovies] = useState([]);
@@ -41,11 +42,11 @@ export default function MoviesPage() {
   };
 
   return (
-    <div>
+    <div className={css.container}>
       <SearchBar onSubmit={handleSubmit} />
       {isLoading && <Loader />}
       {error && <ErrorMessage />}
-      <MovieList movies={movies} />
+      {movies && <MovieList movies={movies} />}
     </div>
   );
 }

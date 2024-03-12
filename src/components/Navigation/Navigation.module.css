@@ -3,28 +3,29 @@
   right: 0;
   top: 0;
   z-index: 1;
-  /* background-color: #3f51b5; */
-  box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.1), 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
-  width: 100%;
+  box-shadow: var(--main-box-shadow);
   background-color: white;
 }
 
-
-.nav{
-    display: flex;
-    gap: 32px;
-    padding: 16px 32px;
+.nav {
+  display: flex;
+  gap: 32px;
+  padding: 16px 64px;
 }
 
-.link{
-text-decoration: none;
-font-weight: 600;
-font-size: 24px;
-color: grey;
+.link {
+  text-decoration: none;
+  font-size: 24px;
+  color: var(--secondary-color);
 }
 
-.isActive{
-   color: white; 
-    color: #3f51b5;;
-/* text-decoration: underline; */
+.link:hover,
+.link:focus {
+  color: var(--main-color);
+  text-decoration: underline;
+}
+
+.isActive {
+  color: var(--main-color);
+  text-decoration: none;
 }

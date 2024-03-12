@@ -10,6 +10,8 @@
   -moz-osx-font-smoothing: grayscale;
 
   --main-color: #3f51b5;
+ --secondary-color: grey;
+  --main-box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.1), 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
 }
 
 

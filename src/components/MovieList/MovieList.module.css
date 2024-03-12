@@ -1,0 +1,23 @@
+.list {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.item {
+  font-size: 20px;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.item:visited {
+  color: var(--main-color);
+}
+
+.item:hover,
+.item:focus {
+  color: var(--main-color);
+  text-decoration: underline;
+}

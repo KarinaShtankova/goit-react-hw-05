@@ -3,6 +3,7 @@ import { fetchMovieCast } from '../../movie-api';
 import { useParams } from 'react-router-dom';
 import Loader from '../Loader/Loader';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
+import css from './MovieCast.module.css';
 
 export default function MovieCast() {
   const { movieId } = useParams();
@@ -35,20 +36,28 @@ export default function MovieCast() {
       {isLoading && <Loader />}
       {error && <ErrorMessage />}
       {cast && (
-        <ul>
+        <ul className={css.list}>
           {cast.map(({ id, character, name, profile_path }) => (
-            <li key={id}>
-              <img
-                src={
-                  profile_path
-                    ? `https://image.tmdb.org/t/p/w500/${profile_path}`
-                    : defaultImg
-                }
-                alt="photo"
-                width={250}
-              />
-              <p>{name}</p>
-              <p>Character: {character}</p>
+            <li className={css.item} key={id}>
+              <div className={css.pic}>
+                {' '}
+                <img
+                  src={
+                    profile_path
+                      ? `https://image.tmdb.org/t/p/w500/${profile_path}`
+                      : defaultImg
+                  }
+                  alt="photo"
+                  width={250}
+                />
+              </div>
+              <div className={css.descContainer}>
+                {' '}
+                <p className={css.title}>{name}</p>
+                <p className={css.desc}>
+                  Character: <span className={css.descSpan}>{character}</span>
+                </p>
+              </div>
             </li>
           ))}
         </ul>
